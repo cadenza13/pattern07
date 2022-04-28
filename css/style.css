@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+body{
+  background-image: url(../img/back01.jpeg);
+}
+
 .hidden{
   display: none;
 }
@@ -90,9 +94,6 @@
 
 #mask > #cartDisplay > #cart{
   max-height: 300px;
-}
-
-#mask > #cartDisplay > #cart.scroll{
   overflow-y: scroll;
 }
 
@@ -219,15 +220,15 @@
 /* -------------------- */
 
 main{
-  position: fixed;
-  top: 0;
+  position: relative;
+  /* top: 0;
   bottom: 0;
   left: 0;
-  right: 0;
+  right: 0; */
   max-width: 1600px;
   max-height: 1200px;
-  margin: 0 auto;
-  background-image: url(../img/back01.jpeg);
+  /* margin: 0 auto;
+  background-image: url(../img/back01.jpeg); */
 }
 
 main > header{
@@ -320,7 +321,7 @@ main > section > ul > .item > p{
 }
 
 main > footer{
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   bottom: 30px;
@@ -346,7 +347,7 @@ main > footer > p{
 
 /* -------------------- */
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   #mask > #buy{
     width: 250px;
     height: 250px;
@@ -366,12 +367,20 @@ main > footer > p{
     font-size: 10px;
   }
 
+  #mask > #cartDisplay > #cart{
+    max-height: 200px;
+  }
+
   #mask > #register{
     left: 160px;
     width: 180px;
     height: 80%;
     margin: auto;
     padding: 8px;
+  }
+
+  #mask > #register > #registerCart{
+    max-height: 200px;
   }
 
   #mask > #register > #registerCart > .register{
@@ -434,13 +443,15 @@ main > footer > p{
     padding: 0 4px;
     font-size: 14px;
     border-radius: 8px;
+    outline: none;
+    border: 2px solid #111;
   }
 
   main > section > ul{
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     width: calc(100% - 150px);
     min-width: 125px;
-    height: 200px;
+    height: 300px;
     margin: 25px 12px 0 0;
   }
   

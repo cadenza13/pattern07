@@ -117,13 +117,8 @@
     total += stock[stockIndex].price * amount;
     cartStock.push(stock[stockIndex]);
     cartStockIndex = cartStock.length - 1
-
-    if(cartHeight >= 300){
-      cart.classList.add('scroll');
-    } else {
-      cartHeight = 50 * cartStock.length;
-      cartDisplay.style.height = cartHeight + 'px';
-    }
+    cartHeight = 50 * cartStock.length;
+    cartDisplay.style.height = cartHeight + 'px';
 
     const li = document.createElement('li');
     const registerLi = document.createElement('li');
@@ -207,6 +202,8 @@
 
         loop = false;
 
+        cartHeight = 50 * cartStock.length;
+        cartDisplay.style.height = cartHeight + 'px';
         mask.classList.add('hidden');
         cartDisplay.classList.add('hidden');
         clerkComment.textContent = 'もどすんですか？ マジですか？';
@@ -251,6 +248,8 @@
     cartStock = [];
     cartElementStock = [];
     deleteStock = [];
+    cartHeight = 50 * cartStock.length;
+    cartDisplay.style.height = cartHeight + 'px';
   });
 
   registerReturnBtn.addEventListener('click', () =>{
