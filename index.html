@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>街のアイテム屋さん</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="mask" class="hidden">
+    <div id="buy" class="hidden">
+      <img id="image" src="" alt="">
+      <div class="buy">
+        <p id="name"></p>
+        <p id="price"></p>
+        <p id="quantity"></p>
+        <div class="upDown">
+          <i class="bi bi-caret-up-fill" id="up"></i>
+          <i class="bi bi-caret-down-fill" id="down"></i>
+        </div>
+      </div>
+      <div class="button">
+        <p id="advance">カートに入れる</p>
+        <p id="return">戻る</p>
+      </div>
+    </div>
+
+    <div id="cartDisplay" class="hidden">
+      <ul id="cart">
+      </ul>
+      <p id="cartTotalPrice"></p>
+      <p id="cartReturnBtn">戻る</p>
+    </div>
+
+    <div id="register" class="hidden">
+      <ul id="registerCart">
+      </ul>
+      <p id="registerTotalPrice"></p>
+      <div class="button">
+        <p id="registerAdvanceBtn">購入する</p>
+        <p id="registerReturnBtn">やっぱりやめる</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <header><img src="img/LOGO.png" alt=""></header>
+
+    <section>
+      <div class="clerk">
+        <img id="clerk" src="img/clerk.png" alt="">
+        <p id="clerkComment">いらっしゃいませ！</p>
+      </div>
+      <ul id="itemCase">
+      </ul>
+    </section>
+
+    <footer>
+      <p id="cartBtn">カート</p>
+      <p id="registerBtn">レジ</p>
+    </footer>
+  </main>
+  
+  <script src="js/main.js"></script>
+</body>
+</html>
